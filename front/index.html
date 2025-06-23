@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy-Checker</title>
-<<<<<<< HEAD
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col font-inter bg-deep-space-black text-cool-white">
 
-    <div id="app" class="relative w-full min-h-screen overflow-hidden">
-        <header class="absolute top-0 left-0 w-full flex justify-between items-center py-4 px-8 z-50">
-            <div class="text-3xl font-bold text-accent-blue glow-text">Privacy-Checker</div>
+    <div class="relative w-full min-h-screen overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20 bg-gradient-to-br from-gray-900 to-black animate-pulse-slow"></div>
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-accent-blue rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob-one"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent-cyan rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob-two"></div>
+
+
+        <header class="absolute top-0 left-0 w-full flex justify-between items-center py-4 px-8 z-50 bg-charcoal/80 backdrop-blur-sm shadow-lg rounded-b-lg">
+            <div class="text-3xl font-bold text-accent-blue glow-text font-poppins">Privacy-Checker</div>
             <nav>
                 <ul class="flex space-x-8">
-                    <li><a href="#welcome-section" class="text-accent-cyan hover:text-white transition duration-300 text-lg">Home</a></li>
-                    <li><a href="#analyzer-section" class="text-accent-cyan hover:text-white transition duration-300 text-lg">Analyze</a></li>
-                    <li><a href="#about-us" class="text-accent-cyan hover:text-white transition duration-300 text-lg">About Us</a></li>
-                    <li><a href="#contact-us" class="text-accent-cyan hover:text-white transition duration-300 text-lg">Contact Us</a></li>
-                    <li><a href="login.html" class="text-accent-cyan hover:text-white transition duration-300">Login / Signup</a></li>
+                    <li><a href="#welcome-section" class="text-accent-cyan hover:text-white transition duration-300 text-lg font-semibold">Home</a></li>
+                    <li><a href="#analyzer-section" id="analyzeNavLink" class="text-accent-cyan hover:text-white transition duration-300 text-lg font-semibold">Analyze</a></li>
+                    <li><a href="BasicComp/About.html" class="text-accent-cyan hover:text-white transition duration-300 text-lg font-semibold">About Us</a></li>
+                    <li><a href="BasicComp/Contact.html" class="text-accent-cyan hover:text-white transition duration-300 text-lg font-semibold">Contact Us</a></li>
+                    <li><a href="login.html" class="text-accent-cyan hover:text-white transition duration-300 text-lg font-semibold">Login/Signup</a></li>
                 </ul>
             </nav>
         </header>
 
-        <main class="w-full flex-grow">
-            <section id="welcome-section" class="h-screen flex flex-col items-center justify-center text-center text-white p-8 relative z-10">
-                <h1 class="text-6xl md:text-7xl font-extrabold mb-6 glow-text animate-fade-in-up">Welcome to Privacy-Checker</h1>
+        <main class="flex-grow container mx-auto px-4 pt-32 pb-16 flex flex-col items-center justify-center relative z-10">
+            <section id="welcome-section" class="text-center mb-24 animate-fade-in-up">
+                <h1 class="text-6xl md:text-7xl font-extrabold text-white mb-6 glow-text font-poppins">Welcome to Privacy-Checker</h1>
                 <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-1">
                     Your ultimate digital guardian. This web app helps users understand privacy policies, identify potential threats, and
                     manage their digital footprint more effectively.
@@ -37,85 +41,37 @@
                 </a>
             </section>
 
-            <section id="analyzer-section" class="min-h-screen flex flex-col items-center justify-center p-8 relative z-10 bg-dark-bg-700 py-16">
-                <div class="w-full max-w-5xl bg-charcoal p-10 rounded-xl shadow-2xl border border-accent-blue transform transition-all duration-500 hover:scale-[1.01]">
-                    <h2 class="text-4xl font-bold text-white mb-8 text-center glow-text">Privacy Policy Analyzer</h2>
-                    <p class="text-lg text-gray-300 mb-8 text-center max-w-3xl mx-auto">
-                        Paste any privacy policy below to get an instant, AI-powered analysis on its safety and key aspects. Understand what you're agreeing to, in plain language.
-                    </p>
+            <section id="analyzer-section" class="w-full max-w-5xl bg-charcoal p-10 rounded-xl shadow-2xl border border-accent-blue transform transition-all duration-500 hover:scale-[1.01] animate-fade-in-up delay-3">
+                <h2 class="text-4xl font-bold text-white mb-8 text-center glow-text font-poppins">Privacy Policy Analyzer</h2>
+                <p class="text-lg text-gray-300 mb-8 text-center max-w-3xl mx-auto">
+                    Paste any privacy policy below to get an instant, AI-powered analysis on its safety and key aspects. Understand what you're agreeing to, in plain language.
+                </p>
 
-                    <textarea
-                        id="policyInput"
-                        class="w-full p-6 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-3 focus:ring-accent-cyan mb-8 text-lg"
-                        placeholder="Paste your privacy policy here..."
-                        rows="12"
-                    >[company name] wants to disclose your personal information.
-=======
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="min-h-screen flex flex-col items-center">
-
-    <!-- Header Section -->
-    <header class="w-full flex justify-between items-center py-4 px-8 bg-charcoal shadow-lg rounded-b-lg">
-        <div class="text-2xl font-bold text-accent-blue glow-text">Privacy-Checker</div>
-        <nav>
-            <ul class="flex space-x-6">
-                <li><a href="#" class="text-accent-cyan hover:text-white transition duration-300">Privacy Check</a></li>
-                <li><a href="#" class="text-accent-cyan hover:text-white transition duration-300">About Us</a></li>
-                <li><a href="#" class="text-accent-cyan hover:text-white transition duration-300">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Main Content Section -->
-    <main class="flex-grow container mx-auto px-4 py-8 flex flex-col items-center justify-center">
-        <!-- Welcome Section -->
-        <section class="text-center mb-12">
-            <h1 class="text-5xl font-extrabold text-white mb-4 glow-text">Welcome to Privacy-Checker</h1>
-            <p class="text-lg text-gray-300 max-w-2xl mx-auto">
-                This web app helps users understand privacy policies, identify potential threats, and
-                manage their digital footprint more effectively.
-            </p>
-        </section>
-
-        <!-- Privacy Policy Analyzer Section -->
-        <section class="w-full max-w-4xl bg-charcoal p-8 rounded-lg shadow-xl border border-accent-blue">
-            <h2 class="text-3xl font-bold text-white mb-6 text-center glow-text">Privacy Policy Analyzer</h2>
-            <p class="text-gray-300 mb-6 text-center">
-                Paste any privacy policy below to get an instant analysis on its safety and key aspects.
-            </p>
-
-            <textarea
-                id="policyInput"
-                class="w-full p-4 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-accent-cyan mb-6"
-                placeholder="Paste your privacy policy here..."
-                rows="10"
-            >[company name] wants to disclose your personal information.
->>>>>>> 91b1c85c9c5f68bb24902ed098c4ed5bb42f85b9
-
+                <textarea
+                    id="policyInput"
+                    class="w-full p-6 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-3 focus:ring-accent-cyan mb-8 text-lg placeholder-gray-500"
+                    placeholder="Paste your privacy policy here...
+Example:
+[company name] wants to disclose your personal information.
 If you have already agreed to share your information with us, feel free to contact us via email and we will be more than happy to change this for you.
+[company name] will not lease, sell or distribute your personal information to any third parties, unless we have your permission. We might do so if the law forces us. Your personal information will be used when we need to send you promotional materials if you agree to this privacy policy."
+                    rows="12"
+                ></textarea>
 
-[company name] will not lease, sell or distribute your personal information to any third parties, unless we have your permission. We might do so if the law forces us. Your personal information will be used when we need to send you promotional materials if you agree to this privacy policy.</textarea>
-
-<<<<<<< HEAD
-                    <div class="text-center">
-                        <button
-                            id="analyzeButton"
-                            class="button-gradient text-white font-bold py-4 px-12 rounded-full shadow-xl hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-charcoal focus:ring-accent-cyan text-xl"
-                        >
-                            Analyze Policy
-                        </button>
-                    </div>
+                <div class="text-center">
+                    <button
+                        id="analyzeButton"
+                        class="button-gradient text-white font-bold py-4 px-12 rounded-full shadow-xl hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-charcoal focus:ring-accent-cyan text-xl"
+                    >
+                        Analyze Policy
+                    </button>
                 </div>
+            </section>
 
-                <div id="analysisResults" class="w-full max-w-5xl bg-charcoal p-10 rounded-xl shadow-2xl border border-accent-blue mt-12 hidden transform transition-all duration-500 hover:scale-[1.01]">
-                    <h2 class="text-4xl font-bold text-white mb-8 text-center glow-text">Analysis Results</h2>
-                    <div id="resultsContent" class="text-gray-300 text-lg">
-                        <p>No policy analyzed yet.</p>
-                    </div>
+            <section id="analysisResults" class="w-full max-w-5xl bg-charcoal p-10 rounded-xl shadow-2xl border border-accent-blue mt-12 hidden transform transition-all duration-500 hover:scale-[1.01] animate-fade-in-up delay-4">
+                <h2 class="text-4xl font-bold text-white mb-8 text-center glow-text font-poppins">Analysis Results</h2>
+                <div id="resultsContent" class="text-gray-300 text-lg">
+                    <p>No policy analyzed yet.</p>
                 </div>
             </section>
         </main>
@@ -125,34 +81,6 @@ If you have already agreed to share your information with us, feel free to conta
         </footer>
     </div>
 
-=======
-            <div class="text-center">
-                <button
-                    id="analyzeButton"
-                    class="button-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-accent-cyan"
-                >
-                    Analyze Policy
-                </button>
-            </div>
-        </section>
-
-        <!-- Analysis Results Section (hidden by default) -->
-        <section id="analysisResults" class="w-full max-w-4xl bg-charcoal p-8 rounded-lg shadow-xl border border-accent-blue mt-8 hidden">
-            <h2 class="text-3xl font-bold text-white mb-6 text-center glow-text">Analysis Results</h2>
-            <div id="resultsContent" class="text-gray-300">
-                <!-- Analysis results will be displayed here -->
-                <p>No policy analyzed yet.</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section (Optional, but good practice) -->
-    <footer class="w-full py-4 text-center text-gray-500 text-sm mt-8">
-        &copy; 2025 Privacy-Checker. All rights reserved.
-    </footer>
-
-    <!-- Link to external JavaScript file -->
->>>>>>> 91b1c85c9c5f68bb24902ed098c4ed5bb42f85b9
     <script src="script.js"></script>
 </body>
 </html>

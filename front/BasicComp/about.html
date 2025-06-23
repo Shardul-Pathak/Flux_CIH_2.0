@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy-Checker - About Us</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external CSS file (main theme) -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Link to component-specific CSS if needed -->
+    <link rel="stylesheet" href="about.css">
+    <!-- Google Fonts for consistency -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <div id="about-app" class="relative w-full min-h-screen flex flex-col items-center justify-center p-4">
+        <!-- Header Section -->
+        <header class="absolute top-0 left-0 w-full flex justify-between items-center py-4 px-8 z-50">
+            <div class="text-3xl font-bold text-accent-blue glow-text">Privacy-Checker</div>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="../index.html" class="text-accent-cyan hover:text-white transition duration-300 text-lg">Home</a></li>
+                    <li><a href="About.html" class="text-white hover:text-accent-cyan transition duration-300 text-lg">About Us</a></li>
+                    <li><a href="Contact.html" class="text-accent-cyan hover:text-white transition duration-300 text-lg">Contact Us</a></li>
+                    <li><a href="../login.html" class="text-accent-cyan hover:text-white transition duration-300 text-lg">Login/Signup</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 py-24 flex flex-col items-center justify-center relative z-10">
+            <section class="w-full max-w-4xl bg-charcoal p-10 rounded-xl shadow-2xl border border-accent-blue transform transition-all duration-500 hover:scale-[1.01]">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-8 text-center glow-text">About Privacy-Checker</h1>
+                <p class="text-lg text-gray-300 mb-6 text-center leading-relaxed">
+                    Welcome to Privacy-Checker, your dedicated companion in navigating the complex world of online privacy.
+                    In an era where digital footprints are constantly expanding, understanding privacy policies is paramount.
+                    Our mission is to demystify these often-opaque documents, empowering you with clarity and control over your personal data.
+                </p>
+                <p class="text-lg text-gray-300 mb-6 text-center leading-relaxed">
+                    Utilizing cutting-edge AI technology, Privacy-Checker analyzes privacy policies to highlight key clauses,
+                    potential risks, and data handling practices in a simple, understandable format. We believe that
+                    everyone deserves to know how their information is being collected, used, and shared.
+                </p>
+                <p class="text-lg text-gray-300 mb-10 text-center leading-relaxed">
+                    Our team is passionate about digital rights and data protection. We are continuously refining our algorithms
+                    and expanding our knowledge base to provide you with the most accurate and up-to-date insights.
+                    Join us in building a more transparent and secure digital future.
+                </p>
+                <div class="text-center">
+                    <a href="Contact.html" class="button-gradient text-white font-bold py-4 px-12 rounded-full shadow-xl hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-charcoal focus:ring-accent-cyan text-xl">
+                        Contact Our Team
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="w-full py-6 text-center text-gray-500 text-sm relative z-10 bg-dark-bg-900 border-t border-gray-800">
+            &copy; 2025 Privacy-Checker. All rights reserved.
+        </footer>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="about.js"></script>
+</body>
+</html>
