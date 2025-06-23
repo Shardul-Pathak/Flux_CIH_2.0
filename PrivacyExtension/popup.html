@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,5 +46,39 @@
         <div id="errorMessage" class="text-red-600 text-sm hidden"></div>
     </div>
     <script src="popup.js"></script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Analyzer</title>
+  <link rel="stylesheet" href="popup-style.css">
+</head>
+<body class="bg-charcoal text-cool-white font-inter p-4 w-[360px] min-h-[400px]">
+
+  <div class="container bg-dark-bg-700 border border-accent-blue rounded-xl shadow-lg p-4">
+    <h1 class="text-xl font-bold glow-text text-center mb-4">Privacy Analyzer</h1>
+
+    <button id="analyzeButton"
+      class="button-gradient w-full py-2 text-white font-semibold rounded-lg shadow-md hover:shadow-xl transition duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent-cyan">
+      Analyze Current Page
+    </button>
+
+    <div id="loadingSpinner" class="loading-spinner mt-4 hidden mx-auto"></div>
+
+    <div id="result"
+      class="mt-4 bg-gray-800 text-gray-300 p-3 rounded-lg border border-accent-blue text-sm max-h-56 overflow-y-auto whitespace-pre-wrap">
+      Click the button above to analyze any privacy policy on the current tab.
+    </div>
+
+    <div id="errorMessage" class="text-red-500 text-sm mt-2 hidden"></div>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
 </html>
