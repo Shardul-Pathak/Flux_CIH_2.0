@@ -1,0 +1,308 @@
+/* Custom styles to refine the color palette and elements for a full-screen, modern look */
+:root {
+    --deep-space-black: #0A0A0A;
+    --dark-bg: #1A1A2E; /* Deeper space background */
+    --dark-bg-700: #161625;
+    --dark-bg-900: #0E0E1A;
+    --primary-accent-blue: #00BFFF; /* Bright Blue */
+    --secondary-accent-cyan: #00FFFF; /* Electric Cyan */
+    --charcoal: #2A2A3D; /* Slightly softer charcoal for cards */
+    --text-light: #E0FFFF; /* Cool White/Light Gray for default text */
+    --text-medium: #B0C4DE; /* Light steel blue for subtle text */
+    --text-dark: #6A7F9E; /* Darker blue-gray for less prominent text */
+    --danger-red: #EF4444; /* Tailwind red-500 */
+}
+
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--deep-space-black) 0%, var(--dark-bg) 100%);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#app, #auth-app {
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%232d3748" fill-opacity="0.25"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 12v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm12 12v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 12v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm-24 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-12V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 36v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm24 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 12v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm-24 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm-12 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-12v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-12v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm-12 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-12V0h-2v4h-4v2h4v4h2V6h4V4h-4zm0 48v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM0 36v-4h-2v4H0v2h4v4h2v-4H4v-2H0zm0-12v-4h-2v4H0v2h4v4h2v-4H4v-2H0z"%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: repeat;
+    background-size: 60px 60px; /* Adjust size of pattern */
+}
+
+/* Header Styling */
+header {
+    background: rgba(10, 10, 10, 0.6); /* Slightly transparent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Text Colors */
+.text-accent-blue {
+    color: var(--primary-accent-blue);
+}
+.text-accent-cyan {
+    color: var(--secondary-accent-cyan);
+}
+.text-gray-300 {
+    color: var(--text-medium);
+}
+.text-gray-400 {
+    color: var(--text-dark);
+}
+.text-red-400 {
+    color: var(--danger-red);
+}
+
+/* Background Colors */
+.bg-charcoal {
+    background-color: var(--charcoal);
+}
+.bg-gray-700 {
+    background-color: #374151; /* Darker gray for input areas */
+}
+.bg-gray-800 {
+    background-color: #1F2937; /* Even darker for analysis cards */
+}
+.bg-dark-bg-700 {
+    background-color: var(--dark-bg-700);
+}
+.bg-dark-bg-900 {
+    background-color: var(--dark-bg-900);
+}
+
+
+/* Borders */
+.border-accent-blue {
+    border-color: var(--primary-accent-blue);
+}
+.border-gray-600 {
+    border-color: #4B5563;
+}
+.border-gray-700 {
+    border-color: #374151;
+}
+.border-gray-800 {
+    border-color: #1F2937;
+}
+
+/* Glow Text Effect */
+.glow-text {
+    text-shadow: 0 0 15px rgba(0, 191, 255, 0.8), /* Blue glow */
+                 0 0 25px rgba(0, 255, 255, 0.6); /* Cyan glow for depth */
+}
+
+/* Button Gradient */
+.button-gradient {
+    background-image: linear-gradient(to right, var(--primary-accent-blue), var(--secondary-accent-cyan));
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-gradient:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.6);
+}
+
+.button-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.7s ease;
+}
+
+.button-gradient:hover::before {
+    left: 100%;
+}
+
+/* Textarea Styling */
+textarea {
+    resize: vertical;
+    min-height: 200px;
+    max-height: 500px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--secondary-accent-cyan);
+    box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.3), inset 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for welcome section */
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInFromBottom 1s ease-out forwards;
+    opacity: 0; /* Ensure elements are hidden initially */
+}
+
+.animate-fade-in-up.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.animate-fade-in-up.delay-2 {
+    animation-delay: 0.6s;
+}
+
+/* Analysis Results Card Styling */
+#analysisResults .bg-gray-800 {
+    background-color: #1F2937;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#analysisResults .bg-gray-800:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 191, 255, 0.2);
+}
+
+/* Login/Signup Page Specific Styles */
+.auth-container {
+    background: var(--charcoal);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    position: relative; /* For absolute positioning of forms */
+    height: auto; /* Allow height to adjust */
+    min-height: 500px; /* Ensure enough space for forms */
+    overflow: hidden; /* Hide overflow during transition */
+}
+
+.auth-form {
+    transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.7s ease-in-out;
+    backface-visibility: hidden; /* Fix for flickering during 3D transform */
+    position: absolute; /* Stack forms */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem; /* Match container padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form.hidden {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none; /* Disable interaction when hidden */
+}
+
+.auth-form:not(.hidden) {
+    transform: translateX(0);
+    opacity: 1;
+    position: relative; /* Bring visible form to flow */
+    z-index: 1;
+}
+
+/* For form fields within login/signup */
+.auth-container input {
+    background-color: var(--gray-800);
+    border: 1px solid var(--gray-700);
+    color: var(--text-light);
+}
+
+.auth-container input:focus {
+    border-color: var(--secondary-accent-cyan);
+    box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+    header nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header nav ul li {
+        margin: 0.5rem;
+    }
+
+    #welcome-section h1 {
+        font-size: 3.5rem;
+    }
+    #welcome-section p {
+        font-size: 1.1rem;
+    }
+
+    #analyzer-section h2, #analysisResults h2 {
+        font-size: 2.5rem;
+    }
+    #analyzer-section p, #analysisResults p {
+        font-size: 1rem;
+    }
+    .button-gradient {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+    textarea {
+        min-height: 150px;
+    }
+
+    .auth-container {
+        padding: 1.5rem;
+        min-height: 400px;
+    }
+    .auth-form {
+        padding: 1.5rem;
+    }
+    .auth-container h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #welcome-section h1 {
+        font-size: 2.5rem;
+    }
+    #welcome-section p {
+        font-size: 0.9rem;
+    }
+    #analyzer-section h2, #analysisResults h2 {
+        font-size: 2rem;
+    }
+    #analyzer-section p, #analysisResults p {
+        font-size: 0.9rem;
+    }
+    .button-gradient {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    .auth-container {
+        padding: 1rem;
+        min-height: 350px;
+    }
+    .auth-form {
+        padding: 1rem;
+    }
+    .auth-container h2 {
+        font-size: 2rem;
+    }
+    .auth-container input {
+        padding: 0.8rem;
+    }
+}

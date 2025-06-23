@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy-Checker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <div id="app" class="relative w-full min-h-screen overflow-hidden">
+        <header class="absolute top-0 left-0 w-full flex justify-between items-center py-4 px-8 z-50">
+            <div class="text-3xl font-bold text-accent-blue glow-text">Privacy-Checker</div>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="#welcome-section" class="text-accent-cyan hover:text-white transition duration-300 text-lg">Home</a></li>
+                    <li><a href="#analyzer-section" class="text-accent-cyan hover:text-white transition duration-300 text-lg">Analyze</a></li>
+                    <li><a href="#about-us" class="text-accent-cyan hover:text-white transition duration-300 text-lg">About Us</a></li>
+                    <li><a href="#contact-us" class="text-accent-cyan hover:text-white transition duration-300 text-lg">Contact Us</a></li>
+                    <li><a href="login.html" class="text-accent-cyan hover:text-white transition duration-300">Login / Signup</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="w-full flex-grow">
+            <section id="welcome-section" class="h-screen flex flex-col items-center justify-center text-center text-white p-8 relative z-10">
+                <h1 class="text-6xl md:text-7xl font-extrabold mb-6 glow-text animate-fade-in-up">Welcome to Privacy-Checker</h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-1">
+                    Your ultimate digital guardian. This web app helps users understand privacy policies, identify potential threats, and
+                    manage their digital footprint more effectively.
+                </p>
+                <a href="#analyzer-section" class="mt-12 button-gradient text-white font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-dark-bg focus:ring-accent-cyan text-lg animate-fade-in-up delay-2">
+                    Start Your Privacy Check
+                </a>
+            </section>
+
+            <section id="analyzer-section" class="min-h-screen flex flex-col items-center justify-center p-8 relative z-10 bg-dark-bg-700 py-16">
+                <div class="w-full max-w-5xl bg-charcoal p-10 rounded-xl shadow-2xl border border-accent-blue transform transition-all duration-500 hover:scale-[1.01]">
+                    <h2 class="text-4xl font-bold text-white mb-8 text-center glow-text">Privacy Policy Analyzer</h2>
+                    <p class="text-lg text-gray-300 mb-8 text-center max-w-3xl mx-auto">
+                        Paste any privacy policy below to get an instant, AI-powered analysis on its safety and key aspects. Understand what you're agreeing to, in plain language.
+                    </p>
+
+                    <textarea
+                        id="policyInput"
+                        class="w-full p-6 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-3 focus:ring-accent-cyan mb-8 text-lg"
+                        placeholder="Paste your privacy policy here..."
+                        rows="12"
+                    >[company name] wants to disclose your personal information.
+
+If you have already agreed to share your information with us, feel free to contact us via email and we will be more than happy to change this for you.
+
+[company name] will not lease, sell or distribute your personal information to any third parties, unless we have your permission. We might do so if the law forces us. Your personal information will be used when we need to send you promotional materials if you agree to this privacy policy.</textarea>
+
+                    <div class="text-center">
+                        <button
+                            id="analyzeButton"
+                            class="button-gradient text-white font-bold py-4 px-12 rounded-full shadow-xl hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-charcoal focus:ring-accent-cyan text-xl"
+                        >
+                            Analyze Policy
+                        </button>
+                    </div>
+                </div>
+
+                <div id="analysisResults" class="w-full max-w-5xl bg-charcoal p-10 rounded-xl shadow-2xl border border-accent-blue mt-12 hidden transform transition-all duration-500 hover:scale-[1.01]">
+                    <h2 class="text-4xl font-bold text-white mb-8 text-center glow-text">Analysis Results</h2>
+                    <div id="resultsContent" class="text-gray-300 text-lg">
+                        <p>No policy analyzed yet.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="w-full py-6 text-center text-gray-500 text-sm relative z-10 bg-dark-bg-900 border-t border-gray-800">
+            &copy; 2025 Privacy-Checker. All rights reserved.
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
