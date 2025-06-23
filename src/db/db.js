@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const connect=mongoose.connect("mongodb+srv://root:Flux%40123@userdata.ltieafe.mongodb.net/?retryWrites=true&w=majority&appName=UserData");
+const connect=mongoose.connect("mongodb+srv://root:<pass>@userdata.ltieafe.mongodb.net/?retryWrites=true&w=majority&appName=UserData");
 
 connect.then(() => {
     console.log("Connected to DB");
