@@ -13,4 +13,16 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+router.get('/about', (req, res) => {
+  res.render('about');
+});
+
+router.get('/contact', (req, res) => {
+  res.render('contact');
+});
+
+router.get('/profile', (req, res) => {
+  res.render('profile');
+});
+
 export default router;
