@@ -60,7 +60,7 @@ ${text.slice(0, 15000)}`.trim();
                 contents: [{ role: "user", parts: [{ text: prompt }] }]
             };
 
-            const apiKey = "AIzaSyATBMahZQ10Vb9NB482J1_efMdjLxDEvxs";
+            const apiKey = "api";
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
             const response = await fetch(apiUrl, {
